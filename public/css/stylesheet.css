@@ -1,0 +1,271 @@
+/* created by Szymon Maslanka */
+
+@import url('reset.css');
+@import url('fonts/stylesheet.css');
+
+* {
+	font-family: ubuntulight;
+}
+
+body
+{	
+	background: url('bg.jpg') 50% 0 no-repeat fixed;
+}
+
+b {	font-family: ubuntubold; }
+i { font-family: ubuntuitalic; }
+
+.log-center {
+	top: 50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -75px;
+	height: 300px;
+	width: 500px;
+	position: absolute;
+}
+
+#log {
+	display: none;
+	-moz-animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+
+
+#login, #pass {
+	margin: 5px;
+	width: 300px;	
+	height: 30px;
+	border-radius: 5px;
+
+	text-align: center; 
+	font-size: 1.4em;
+	color: #47BAC1;
+	float: left;
+}
+
+#logMe, #playMe {	
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	text-align: center;
+	margin-top: 4px;
+	outline: none;
+
+	font-size: 1.4em;
+	font-weight: 900;
+	color: white;
+	background: #47BAC1;
+	border: 5px solid white;
+	text-shadow: white 0px 0px 1px;
+	
+}
+
+#profil {
+	display: none;
+}
+
+#playMe {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -40px;
+}
+
+#head {
+	width: 100%;	
+	color: #fff;
+	font-family: 'ubuntulight';
+}
+
+#myName {
+	font-size: 25px;
+	padding-top: 16px;
+	padding-right: 10px;
+	float: right;
+	cursor: default;	
+}
+
+#killer	{
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	border: 2px solid #fff;
+	background: url(../images/logout_icon.png) 5px 4px no-repeat;
+	float: right;
+	cursor: pointer;
+
+}
+
+#search {
+	display: none;
+	margin-left: -50px;
+	color: white;
+	font-size: 2.5em;
+	font-family: ubuntulight;
+	font-weight: bold;
+	text-shadow: white 0px 0px 1px;
+
+}
+
+#scores {
+	display: none;
+	width: 500px;
+	height: 100%;
+	margin-left: 20px;
+	position: relative;
+	color: white;
+	font-size: 30px;
+	font-family: "ubuntulight";
+}
+
+#wins, #looses {
+	width: 200px;
+	position: absolute;
+	bottom: 5px;
+	padding-bottom: 300px;
+	text-align: center;
+	
+
+    opacity: .1;
+    transition: opacity .2s ease-out;
+    -moz-transition: opacity .2s ease-out;
+    -webkit-transition: opacity .2s ease-out;
+    -o-transition: opacity .2s ease-out;
+}
+#wins {
+    float: left;
+    background: #A4E670;
+}
+
+#looses {
+    margin: 0 0 0 205px;
+    background: #DE3961;
+}
+
+#wins:hover, #looses:hover {
+	opacity: 1;
+}
+#search p {
+	float: left;
+}
+
+#search img {
+	margin-left: 50px;
+	margin-top: 10px;
+}
+
+#headerGame {
+	width: 300px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 25px;
+	text-align: center;
+	padding-top: 15px;
+}
+
+
+#timer {
+	font-size: 80px;
+	color: #fff;
+	font-family: 'ubuntubold';
+	opacity: 0.8;
+}
+
+#game {
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#gameCanvas {
+	height: 600px;
+	width: 800px; 
+	margin-top: 25px;
+  
+    background: rgba(255,255,255,0.2);   
+    border: 10px solid rgba(255,255,255,0.7);
+    border-radius: 25px; 
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+
+#gameContent {
+	margin: 0 auto;
+	width: 820px;
+	height: 620px;
+
+}
+
+
+#grass1, #grass2, #grass3, #footer {
+	width: 100%;
+	height: 261px;
+	bottom: 0px;
+	position: absolute;
+}
+
+#grass1 {
+		background: url('../images/grass1.png') -1250px 0px;
+}
+
+#grass2 {
+		background: url('../images/grass2.png') -1250px 0px;
+}
+
+#grass3 {
+		background: url('../images/grass3.png') -1250px 0px;
+}
+
+input, textarea {
+	padding: 1px;
+	border: 1px solid lightgray;
+	width: 200px;
+	margin: 0.6%;
+
+	border-radius: 5px; 
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;		
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	border-color: 1px solid lightgray;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;	
+}
+
+#tooltip
+{
+	font-size: 0.8em;
+	font-family: "ubuntulight";
+    text-align: center;
+    color: black;
+    background: rgba(255,255,255,0.6);
+    
+    position: absolute;
+    z-index: 100;
+    padding: 5px;
+}
+
+
+
+#winner,
+#looser {
+	position: relative;
+	top: 20%;
+	font-size: 150px;
+	font-family: "ubuntubold";
+	color: #fff;
+}
+
+#endGameWon,
+#endGameLost {
+	display: none;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
